@@ -27,3 +27,15 @@ function getUserAverageAge(arr) {
 }
 
 console.log(getUserAverageAge(users).toFixed(0));
+
+// 2.
+
+function getUserNames(arr) {
+  let newArr = [];
+  arr.map((user) => {
+    newArr.push(user.name);
+  });
+  console.log(newArr);
+}
+
+getUserNames(users);
