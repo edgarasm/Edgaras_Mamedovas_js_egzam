@@ -9,10 +9,10 @@ Pastaba: atvaizdavimas turi būti matomas pateikus formą ir pateikiamas
 <div id="output"></div> viduje, bei turi turėti bent minimalų stilių;
 ------------------------------------------------------------------- */
 
+const formEl = document.forms[0];
 const inputEL = document.getElementById('search');
 const submitBtnEl = document.getElementById('submit-btn');
 const outputEl = document.getElementById('output');
-const formEl = document.forms[0];
 
 const kgToLb = inputEL.value * 2.2046;
 const kgToG = inputEL.value / 0.001;
