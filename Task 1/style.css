@@ -56,7 +56,7 @@ form {
   padding: 20px;
   width: 80%;
   margin: auto;
-  font-size: 2em;
+  font-size: 1.1em;
 }
 
 /* Tablet */
@@ -67,6 +67,10 @@ form {
 
   #search,
   #submit-btn {
+    font-size: 2em;
+  }
+
+  #output {
     font-size: 2em;
   }
 }
