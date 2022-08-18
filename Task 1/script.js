@@ -14,25 +14,15 @@ const inputEL = document.getElementById('search');
 const submitBtnEl = document.getElementById('submit-btn');
 const outputEl = document.getElementById('output');
 
-const kgToLb = inputEL.value * 2.2046;
-const kgToG = inputEL.value / 0.001;
-const kgToOz = inputEL.value * 35.274;
-
 formEl.addEventListener('submit', (e) => {
   e.preventDefault();
+  outputEl.innerHTML = '';
   showResultInHtml();
 });
 
 function showResultInHtml() {
-  const pEl = document.createElement('p');
-  pEl.innerHTML = `${inputEL.value}kg = ${(inputEL.value * 2.2046).toFixed(
-    2
-  )}lb <br>`;
-  pEl.innerHTML += `${inputEL.value}kg = ${(inputEL.value / 0.001).toFixed(
-    0
-  )}g <br>`;
-  pEl.innerHTML += `${inputEL.value}kg = ${(inputEL.value * 35.274).toFixed(
-    2
-  )}oz`;
-  outputEl.append(pEl);
+  outputEl.innerHTML = `
+  <p>${inputEL.value} kg = ${(inputEL.value * 2.2046).toFixed(2)} lbs</p>
+  <p>${inputEL.value} kg = ${(inputEL.value / 0.001).toFixed(0)} g</p>
+  <p>${inputEL.value} kg = ${(inputEL.value * 35.274).toFixed(2)} oz</p>`;
 }
