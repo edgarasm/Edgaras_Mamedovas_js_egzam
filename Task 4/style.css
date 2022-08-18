@@ -29,20 +29,37 @@
 }
 
 #output {
-  /* display: grid; */
-  /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
   margin: 2em;
   gap: 1em;
 }
 .card {
   flex-basis: 23%;
   padding: 1em;
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 1em;
 }
 
 .card h3 {
+  text-align: center;
+  text-decoration: underline;
   margin-bottom: 1em;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  #output {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 992px) {
+  #output {
+    /* display: grid; */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
 }
