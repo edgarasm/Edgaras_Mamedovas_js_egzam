@@ -19,3 +19,43 @@ const users = [
   { id: '8', name: 'Simon Peterson', age: 30, hasDog: false },
   { id: '9', name: 'Daniel Cane', age: 51, hasDog: true },
 ];
+
+// 1.
+
+function filterDogOwners(arr) {
+  arr.map((user) => {
+    if (user.hasDog === true) {
+      console.log(user.name);
+    }
+  });
+}
+
+filterDogOwners(users);
+
+// filtered dog owners array
+
+function filterDogOwnersArr(arr) {
+  let newArr = [];
+  arr.map((user) => {
+    if (user.hasDog === true) {
+      newArr.push(user.name);
+    }
+  });
+  return newArr;
+}
+
+console.log(filterDogOwnersArr(users));
+
+// 2.
+
+function filterAdults(arr) {
+  let adultArr = [];
+  arr.map((user) => {
+    if (user.age > 17) {
+      adultArr.push(user);
+    }
+  });
+  return adultArr;
+}
+
+console.log(filterAdults(users));
