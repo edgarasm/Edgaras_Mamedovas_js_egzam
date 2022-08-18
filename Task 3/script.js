@@ -18,7 +18,7 @@ const outputEl = document.getElementById('output');
 const messageEl = document.getElementById('message');
 
 btnEl.addEventListener('click', () => {
-  messageEl.innerHTML = '';
+  messageEl.remove();
   getUsersAndGenerateList();
 });
 
@@ -31,7 +31,7 @@ async function getUsersFromApi(url) {
   const resp = await fetch(url);
   if (!resp.ok) throw 'something went wrong!';
   const users = await resp.json();
-  console.log('users ===', users);
+  // console.log('users ===', users);
   return users;
 }
 
@@ -40,6 +40,6 @@ function generateList(users) {
     const divEl = document.createElement('div');
     divEl.classList.add('card');
     divEl.innerHTML = `<img src="${user.avatar_url}" alt="${user.login}-avatar"> <h3>${user.login}</h3>`;
-    // return divEl;
+    outputEl.append(divEl);
   });
 }
