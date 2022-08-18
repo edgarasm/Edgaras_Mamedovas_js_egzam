@@ -44,7 +44,7 @@ function filterDogOwnersArr(arr) {
   return newArr;
 }
 
-console.log(filterDogOwnersArr(users));
+console.log('filterDogOwnersArr ===', filterDogOwnersArr(users));
 
 // 2.
 
@@ -58,4 +58,4 @@ function filterAdults(arr) {
   return adultArr;
 }
 
-console.log(filterAdults(users));
+console.log('filterAdults ===', filterAdults(users));
