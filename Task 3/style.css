@@ -59,3 +59,39 @@
   border-radius: 5px;
   background-color: #fff;
 }
+
+#output {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  max-width: 100%;
+}
+
+.card {
+  background-color: tomato;
+  border: 5px solid black;
+  box-shadow: 5px 5px 5px grey;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card h3 {
+  text-align: center;
+  font-size: 2em;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  #output {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1200px) {
+  #output {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
