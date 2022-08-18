@@ -26,7 +26,7 @@ function getUserAverageAge(arr) {
   return arr.reduce((total, num) => total + num.age, 0) / arr.length;
 }
 
-console.log(getUserAverageAge(users).toFixed(0));
+console.log('getUserAverageAge ===', getUserAverageAge(users).toFixed(0));
 
 // 2.
 
@@ -35,7 +35,7 @@ function getUserNames(arr) {
   arr.map((user) => {
     newArr.push(user.name);
   });
-  console.log(newArr);
+  return newArr;
 }
 
-getUserNames(users);
+console.log('getUserNames ===', getUserNames(users));
