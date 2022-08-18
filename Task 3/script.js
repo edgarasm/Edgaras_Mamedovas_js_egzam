@@ -34,12 +34,3 @@ async function getUsersFromApi(url) {
   console.log('users ===', users);
   return users;
 }
-
-function generateList(users) {
-  users.forEach((user) => {
-    const divEl = document.createElement('div');
-    divEl.classList.add('card');
-    divEl.innerHTML = `<img src="${user.avatar_url}" alt="${user.login}-avatar"> <h3>${user.login}</h3>`;
-    return divEl;
-  });
-}
