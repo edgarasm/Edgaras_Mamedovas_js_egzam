@@ -59,3 +59,8 @@
   border-radius: 5px;
   background-color: #fff;
 }
+
+.card {
+  display: flex;
+  background-color: tomato;
+}
