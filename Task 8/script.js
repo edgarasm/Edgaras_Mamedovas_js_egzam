@@ -23,4 +23,6 @@ function Calculator() {
 
 const test = new Calculator();
 
+console.log(test.subtraction(355, 25));
+console.log(test.multiplication(355, 25));
 console.log(test.division(355, 25));
