@@ -64,11 +64,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1em;
+  max-width: 100%;
 }
 
 .card {
   background-color: tomato;
-  border: 2px solid black;
+  border: 5px solid black;
+  box-shadow: 5px 5px 5px grey;
 }
 
 .card img {
@@ -85,17 +87,11 @@
   #output {
     grid-template-columns: 1fr 1fr 1fr;
   }
-  .card img {
-    width: 100%;
-  }
 }
 
 /* Desktop */
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   #output {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-  .card img {
-    width: 100%;
   }
 }
